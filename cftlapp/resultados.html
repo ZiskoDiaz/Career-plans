@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Cftla App</title>
+  </head>
+  <body>
+    <style>
+      .search {
+        width: 100%;
+        position: top;
+        display: flex;
+      }
+
+      .searchTerm {
+        width: 100%;
+        border: 3px solid #00B4CC;
+        border-right: none;
+        padding: 5px;
+        height: 36px;
+        border-radius: 5px 0 0 5px;
+        outline: none;
+        color: #9DBFAF;
+      }
+
+      .searchTerm:focus{
+        color: #00B4CC;
+      }
+
+      .searchButton {
+        width: 40px;
+        height: 36px;
+        border: 1px solid #00B4CC;
+        background: #00B4CC;
+        text-align: center;
+        color: #fff;
+        border-radius: 0 5px 5px 0;
+        cursor: pointer;
+        font-size: 20px;
+      }
+
+      /*Resize the wrap to see the search bar change!*/
+      .wrap{
+        width: 30%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      nav{
+        width: auto;
+        height: 30px;
+      }
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        color: #333;
+        text-align: center;
+      }
+
+      li {
+        display: inline-block;
+        font-size: 1em;
+        list-style-type: none;
+        padding: 1em;
+        text-transform: uppercase;
+      }
+
+      li span {
+        display: block;
+        font-size: 2.5rem;
+      }
+    </style>
+
+    <!-- header -->
+    <header class="header">
+      <div class="container">
+        <img class="ccol-md-4"src="imagenes/logo_color2.png" width=50% height=100%>
+      </div>
+      <nav class="navbar navbar-expand-sm bg-light navbar-blue">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#">Cftla</a>
+
+        <!-- Links -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Prematriculate</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Conoce tus resultados</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+      <!-- fin del header -->
+
+      <br><br><br>
+      <center>   <p>Ingrese su RUN </p><br>   </center>
+      <!-- barra de busqueda-->
+      <article>
+      <div class="wrap">
+         <div class="search">
+            <input type="text" class="searchTerm" placeholder="Conoce aquí tus resultados">
+            <button type="submit" class="searchButton">
+              <i class="fa fa-search"></i>
+           </button>
+         </div>
+      </div>
+      </article>
+      <!-- Fin barra de búsqueda-->
+      <!-- contador día de matriculas -->
+      <footer>
+      <div class="container">
+        <br><br><br><br><br><br><br>
+        <h5 id="head">Días que faltan para conocer tus resultados:</h5>
+        <ul>
+          <li><span id="days"></span>días</li>
+          <li><span id="hours"></span>Horas</li>
+          <li><span id="minutes"></span>Minutos</li>
+          <li><span id="seconds"></span>Segundos</li>
+        </ul>
+      </div>
+        <script>
+                const second = 1000,
+                minute = second * 60,
+                hour = minute * 60,
+                day = hour * 24;
+                let countDown = new Date('Oct 30, 2019 10:00:00').getTime(),
+                    x = setInterval(function() {
+                let now = new Date().getTime(),
+                    distance = countDown - now;
+                document.getElementById('days').innerText = Math.floor(distance / (day)),
+                document.getElementById('hours').innerText = Math.floor((distance % (day)) / (hour)),
+                document.getElementById('minutes').innerText = Math.floor((distance % (hour)) / (minute)),
+                document.getElementById('seconds').innerText = Math.floor((distance % (minute)) / second);
+            }, second)
+        </script>
+    <!-- fin contador -->
+  </footer>
+  </body>
+</html>
