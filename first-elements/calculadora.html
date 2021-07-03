@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="Spanish">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Calculadora </title>
+    </title>
+  </head>
+
+  <body>
+    <!-- calculadora en html -->
+
+    <div style="background-color:#BD7709;text-align:left; padding:5px;margin-top:2px;">
+      <table border="0px solid black" width="60%" border-collapse="collapse" padding="5px">
+      <tr>
+
+        <!-- AQUÍ PEDIMOS NOMBRE - CORREO - PASSWORD -->
+
+        <td width="66%"> <left>Primer Número</left> </td>
+        <td> <center> <form action="/action_page.php">
+        <input type="number" name="numero1" placeholder="Inserte Primer Numero"> </center>
+        </td>
+        </tr>
+        <tr>
+          <td width="66%"> <left>Segundo Número</left> </td>
+          <td> <center> <form>
+            <input type="number" name="numero2" placeholder="Inserte segundo Número">
+          </form> </center>
+          </td>
+        </tr>
+
+      </table>
+  <!-- TERCERA SUBDIVISIÓN -->
+
+    <div style="background-color:#02476F;text-align:center;padding:5px;margin-top:2px;">
+      Datos Personales <br>
+    </div>
+
+    <div style="background-color:#02CDFF;text-align:left; padding:5px;margin-top:2px;">
+      <table border="0px solid black" width="60%" border-collapse="collapse" padding="15px">
+      <tr>
+        <td width="72%"> <left>Operadores</left> </td>
+        <td> <left>
+          <input type="radio" name="operador" value="suma" checked> + <br>
+          <input type="radio" name="operador" value="resta"> - <br>
+          <input type="radio" name="operador" value="multiplicacion" checked> * <br>
+          <input type="radio" name="operador" value="division"> / <br>
+        </left> </td>
+      </tr>
+      <table>
+
+        <table border="0px solid black" width="60%" border-collapse="collapse" padding="15px">
+        <tr>
+          <td width="72%"> <left>Comuna</left> </td>
+          <td> <form action="/action_page.php">
+              <select name="comuna">
+              <option placeholder= "Seleccione comuna"> Seleccione </option>
+              <option value="lota">Lota</option>
+              <option value="coronel">Coronel</option>
+              <option value="arauco">Arauco</option>
+              <option value="San_pedro_de_la_paz">San Pedro de la Paz</option>
+              <option value="talcahuano">Talcahuano</option>
+              <option value="chiguayante">Chiguayante</option>
+              <option value="hualqui">Hualqui</option>
+              <option value="concepcion">Concepción</option>
+            </form></select> </td>
+        </tr>
+        <table>
+
+    </div>
+
+    <div style="background-color:#02CDFF;text-align:left; padding:5px;margin-top:2px;">
+      <table border="0px solid black" width="60%" border-collapse="collapse" padding="15px">
+      <tr>
+        <td width="72%"> <left>Fecha de Nacimiento</left> </td>
+        <td> <left>
+        <form>
+            <input type="date" name="bday">
+        </form>
+        </left> </td>
+      </tr>
+
+      <tr>
+        <td width="72%"> <Left> Legalidades </left> </td>
+        <td> <left>
+
+          <form>
+            <input type="checkbox" name="mayor18" value="mayor18"> Mayor de 18 años<br>
+            <input type="checkbox" name="aceptocondic" value="accept"> Acepto las condiciones de uso
+          </form>
+        </td>
+      <tr>
+    </table>
+
+    </div>
+    <!-- CIERRE CON ENVIAR -->
+
+    <br>
+
+    </div>
+  <header>
+    <div style="background-color:#008DE1;text-align:center;padding:10px;margin-top:2px;">
+        <center> <input type="submit" value="Submit" onclick="alert('Datos guardados correctamente!!')"> </input> </center>
+    </div>
+  </header>
+  </body>
+</html>

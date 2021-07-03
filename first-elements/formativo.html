@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="Spanish">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Formativo </title>
+
+    <style>
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 16px;
+        text-decoration: none;
+    }
+
+    li a:hover {
+        background-color: #111111;
+      }
+    header
+    {
+        background-color: #0077BF;
+        padding: 1px;
+        text-align: center;
+        font-size: 20px;
+        color: white;
+    }
+
+    aside {
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        background: #ccc;
+        padding: 20px;
+    }
+
+    section
+    {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+    background-color: #008DE1;
+    padding: 1px;
+    }
+
+    article
+    {
+    -webkit-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+    background-color: #004975;
+    padding: 1px;
+    }
+
+    {
+  box-sizing: border-box;
+
+  .right {
+    background-color:#e5e5e5;
+    float:left;
+    width:20%;
+    padding:15px;
+    margin-top:7px;
+    text-align:center;
+  }
+
+  .left {
+    background-color:#e5e5e5;
+    float:left;
+    width:20%;
+    padding:15px;
+    margin-top:7px;
+    text-align:center;
+  }
+  @media only screen and (max-width:620px)
+  {
+    /* For mobile phones: */
+        .side, .main, .right
+        {
+        width:100%;
+        }
+  }
+
+  </style>
+
+  </head>
+
+  <body style="font-family:Arial ;color:#000000" >
+
+  <header>
+
+<!-- INICIO PANTALLA -->
+
+  <div class="main">
+  <div style="background-color:#008DE1;text-align:center;padding:5px;margin-top:2px;">
+    <b>FORMULARIO DE REGISTRO</b>
+  </div>
+
+<!-- PRIMERA SUBDIVISIÓN -->
+
+  <div style="background-color:#02476F;text-align:center;padding:5px;margin-top:2px;">
+    Datos de Cuenta <br>
+  </div>
+
+<!-- SEGUNDA SUBDIVISIÓN -->
+
+  <div style="background-color:#02CDFF;text-align:left; padding:5px;margin-top:2px;">
+    <table border="0px solid black" width="60%" border-collapse="collapse" padding="5px">
+    <tr>
+
+      <!-- AQUÍ PEDIMOS NOMBRE - CORREO - PASSWORD -->
+
+      <td width="66%"> <left>Nombre</left> </td>
+      <td> <center> <form action="/action_page.php">
+      <input type="text" name="fname" placeholder="Inserte Nombre"> </center>
+      </td>
+      </tr>
+      <tr>
+        <td width="66%"> <left>Email</left> </td>
+        <td> <center> <form>
+          <input type="email" name="email" placeholder="usuario@servidor.com">
+        </form> </center>
+        </td>
+      </tr>
+
+    <tr>
+      <td width="66%"> <left>Password</left> </td>
+      <td> <center> <form> <input type="password" name="psw" placeholder="ingrese contraseña">
+      </form> </center>
+      </td>
+    </tr>
+    </table>
+<!-- TERCERA SUBDIVISIÓN -->
+
+  <div style="background-color:#02476F;text-align:center;padding:5px;margin-top:2px;">
+    Datos Personales <br>
+  </div>
+
+  <div style="background-color:#02CDFF;text-align:left; padding:5px;margin-top:2px;">
+    <table border="0px solid black" width="60%" border-collapse="collapse" padding="15px">
+    <tr>
+      <td width="72%"> <left>Género</left> </td>
+      <td> <left>
+        <input type="radio" name="gender" value="male" checked> Masculino <br>
+        <input type="radio" name="gender" value="female"> Femenino <br>
+        <input type="radio" name="gender" value="other"> Otro
+      </left> </td>
+    </tr>
+    <table>
+
+      <table border="0px solid black" width="60%" border-collapse="collapse" padding="15px">
+      <tr>
+        <td width="72%"> <left>Comuna</left> </td>
+        <td> <form action="/action_page.php">
+            <select name="comuna">
+            <option placeholder= "Seleccione comuna"> Seleccione </option>
+            <option value="lota">Lota</option>
+            <option value="coronel">Coronel</option>
+            <option value="arauco">Arauco</option>
+            <option value="San_pedro_de_la_paz">San Pedro de la Paz</option>
+            <option value="talcahuano">Talcahuano</option>
+            <option value="chiguayante">Chiguayante</option>
+            <option value="hualqui">Hualqui</option>
+            <option value="concepcion">Concepción</option>
+          </form></select> </td>
+      </tr>
+      <table>
+
+  </div>
+
+  <div style="background-color:#02CDFF;text-align:left; padding:5px;margin-top:2px;">
+    <table border="0px solid black" width="60%" border-collapse="collapse" padding="15px">
+    <tr>
+      <td width="72%"> <left>Fecha de Nacimiento</left> </td>
+      <td> <left>
+      <form>
+          <input type="date" name="bday">
+      </form>
+      </left> </td>
+    </tr>
+
+    <tr>
+      <td width="72%"> <Left> Legalidades </left> </td>
+      <td> <left>
+
+        <form>
+          <input type="checkbox" name="mayor18" value="mayor18"> Mayor de 18 años<br>
+          <input type="checkbox" name="aceptocondic" value="accept"> Acepto las condiciones de uso
+        </form>
+      </td>
+    <tr>
+  </table>
+
+  </div>
+  <!-- CIERRE CON ENVIAR -->
+
+  <br>
+
+  </div>
+  </header>
+  <header>
+    <div style="background-color:#008DE1;text-align:center;padding:10px;margin-top:2px;">
+        <center> <input type="submit" value="Submit" onclick="alert('Datos guardados correctamente!!')"> </input> </center>
+    </div>
+  </header>
+  </body>
+</html>
